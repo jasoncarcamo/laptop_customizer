@@ -72,7 +72,7 @@ class App extends React.Component {
   }
 
 //this will be used with other files
-  updateFeature(feature, newValue) {
+  updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
@@ -85,9 +85,8 @@ class App extends React.Component {
       <div className="App">
         <myHeader />   
         <main>
-         <Features updateFeature={((feature, newValue) =>  this.updateFeature(feature, newValue))} selected={this.state.selected} features={this.state.features}/>
-
-         <Total selected={this.state.selected}/>
+          <Features updateFeature={((feature, newValue) =>  this.updateFeature(feature, newValue))} selected={this.state.selected} features={this.state.features}/>
+          <Total selected={this.state.selected}/>
         </main>
         
       </div>
