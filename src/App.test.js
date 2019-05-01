@@ -12,12 +12,5 @@ describe('Component', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('renders the UI as expected', () => {
-    const tree = renderer
-    .create(<div/>)
-    .toJson();
-    expect(tree).toMatchSnapshot();
-  })
-
 })
 
